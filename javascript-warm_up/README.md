@@ -1,5 +1,6 @@
 # JavaScript - Warm up
 > JavaScript
+
 JavaScript is used for many things. At ALX, you will use JavaScript for 2 reasons:
 
 * Scripting (same as we did with Python)
