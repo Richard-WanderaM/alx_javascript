@@ -8,13 +8,13 @@ function showForm() {
   }
   
   function deleteCookiesAndShowForm() {
-    document.cookie = 'firstname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    document.cookie = 'email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    Cookies.remove('firstname');
+    Cookies.remove('email');
     showForm();
   }
   
   function showWelcomeMessageOrForm() {
-    const firstname = getCookie('firstname');
+    const firstname = Cookies.get('firstname');
     const welcomeMessage = document.getElementById('welcomeText');
   
     if (firstname) {
@@ -26,6 +26,16 @@ function showForm() {
     } else {
       showForm();
     }
+  }
+  
+  function setCookiesAndShowWelcomeMessage() {
+    const firstNameInput = document.getElementById('firstname').value;
+    const emailInput = document.getElementById('email').value;
+  
+    Cookies.set('firstname', firstNameInput);
+    Cookies.set('email', emailInput);
+  
+    showWelcomeMessageOrForm();
   }
   
   showWelcomeMessageOrForm();
