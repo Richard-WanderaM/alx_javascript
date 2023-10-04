@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookie Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+  <style>
+    /* Add your CSS styles here */
+  </style>
+</head>
+<body>
+  <div id="loginForm" style="display: none;">
+    <h2>Login</h2>
+    <input type="text" id="firstname" placeholder="First Name"><br>
+    <input type="text" id="email" placeholder="Email"><br>
+    <button onclick="setCookiesAndShowWelcomeMessage()">Log me in</button>
+    <button onclick="showCookies()">Show the cookies</button>
+  </div>
+
+  <div id="welcomeMessage" style="display: none;">
+    <h1 id="welcomeText"></h1>
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+</html>
