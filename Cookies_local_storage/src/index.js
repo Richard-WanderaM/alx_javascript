@@ -1,19 +1,25 @@
-function setCookies() {
-    const firstNameInput = document.getElementById('firstname').value;
-    const emailInput = document.getElementById('email').value;
+function showCookies() {
+    const cookiesParagraph = document.createElement('p');
+    
+    // Get the values of the cookies
+    const email = getCookie('email');
+    const firstname = getCookie('firstname');
   
-    // Get the current date and time
-    const now = new Date();
+    // Display the values in the specified format
+    cookiesParagraph.innerHTML = `Email: ${email} - Firstname: ${firstname}`;
   
-    // Calculate the expiration date (10 days from now)
-    const expirationDate = new Date(now.getTime() + 10 * 24 * 60 * 60 * 1000);
+    document.body.appendChild(cookiesParagraph);
+  }
   
-    // Format the expiration date as a string in UTC format
-    const expirationDateString = expirationDate.toUTCString();
-  
-    // Set the cookies with the expiration date and specific path
-    document.cookie = `firstname=${firstNameInput}; expires=${expirationDateString}; path=/`;
-    document.cookie = `email=${emailInput}; expires=${expirationDateString}; path=/`;
+  function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.startsWith(name + '=')) {
+        return cookie.substring(name.length + 1);
+      }
+    }
+    return '';
   }
   
   
