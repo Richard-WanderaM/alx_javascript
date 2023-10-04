@@ -1,8 +1,8 @@
 const availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
 
-function checkLocalStorageSupport() {
+function checkSessionStorageSupport() {
   try {
-    const storage = window.localStorage;
+    const storage = window.sessionStorage;
     storage.setItem('test', 'test');
     storage.removeItem('test');
     return true;
@@ -12,7 +12,7 @@ function checkLocalStorageSupport() {
 }
 
 function addItemToCart(item) {
-  localStorage.setItem(item, 'true');
+  sessionStorage.setItem(item, 'true');
   displayCart();
 }
 
@@ -29,20 +29,24 @@ function createStore() {
 }
 
 function displayCart() {
-  const cartItemsCount = Object.keys(localStorage).length;
+  const cartItemsCount = Object.keys(sessionStorage).length;
 
-  if (cartItemsCount > 0) {
+  const previousMessage = document.querySelector('#previousMessage');
+  if (previousMessage) {
+    previousMessage.textContent = `You previously had ${cartItemsCount} item${cartItemsCount > 1 ? 's' : ''} in your cart.`;
+  } else if (cartItemsCount > 0) {
     const p = document.createElement('p');
     p.textContent = `You previously had ${cartItemsCount} item${cartItemsCount > 1 ? 's' : ''} in your cart.`;
+    p.id = 'previousMessage';
     document.body.appendChild(p);
   }
 }
 
 function initializeApp() {
-  const supportsLocalStorage = checkLocalStorageSupport();
+  const supportsSessionStorage = checkSessionStorageSupport();
 
-  if (!supportsLocalStorage) {
-    alert('Sorry, your browser does not support Web storage. Try again with a better one.');
+  if (!supportsSessionStorage) {
+    alert('Sorry, your browser does not support session storage. Try again with a better one.');
     return;
   }
 
