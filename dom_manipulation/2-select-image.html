@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modifying Elements</title>
+  <style>
+    img {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <img id="myImage" src="https://picsum.photos/200/300" alt="My Image">
+
+  <script>
+    // JavaScript code to modify the img element
+    const imageElement = document.getElementById('myImage');
+    imageElement.src = 'https://picsum.photos/200/301';
+    imageElement.alt = 'New image';
+    imageElement.style.border = '2px solid red';
+  </script>
+</body>
+</html>
