@@ -1,0 +1,54 @@
+body {
+    background-color: #828282; /* Set your desired background color */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #080808;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007BFF; /* Set your desired button color */
+    color: greenyellow;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Change color on hover if desired */
+}
+
+#error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#success {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
