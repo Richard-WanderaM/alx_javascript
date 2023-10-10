@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #8075b1; 
     padding: 20px;
   }
   
@@ -8,7 +8,7 @@ body {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -19,7 +19,7 @@ body {
   }
   
   input {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 10px;
   }
@@ -39,7 +39,8 @@ body {
   
   #error {
     color: red;
-    margin-top: -10px;
+    margin-top: 20px; 
     margin-bottom: 10px;
   }
+  
   
