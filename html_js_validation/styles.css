@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Set your desired background color */
+    background-color: grey; /* Set your desired background color */
     padding: 20px;
     margin: 0;
     display: flex;
@@ -23,17 +23,17 @@ label {
 }
 
 input {
-    width: 100%;
+    width: 90%;
     padding: 8px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid goldenrod;
     border-radius: 5px;
 }
 
 button {
     padding: 10px 20px;
     background-color: #007BFF; /* Set your desired button color */
-    color: #ffffff;
+    color: burlywood;
     border: none;
     border-radius: 5px;
     cursor: pointer;
